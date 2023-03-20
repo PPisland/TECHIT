@@ -1,9 +1,12 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
 body {
     margin: 0;
     color:#222222;
+    font-family: "Pretendard";
   }
   
-  .header {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,15 +83,283 @@ body {
   .bannerMessage {
   position: absolute;
   top: 50%;
-  margin-left:96px;
+  margin-left:196px;
   font-size:18px;
   transform: translateY(-50%);
   }
 
   .bannerTitle {
     font-size: 32px;
-    font-weight: 2200px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  .content {
+    max-width: 1280px;
+    margin:auto;
+    margin-top: 72px;
+  }
+
+  .contentTitle {
+    font-weight: 600;
+    color: #e67800;    
+  }
+  .contentMessage {
+    margin-top: 16px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .contentdetail{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;;
+  }
+  
+  .contentsDetail div:nth-child(1) {
+    color: #737373;
+  }
+
+  .contentsGrid {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+    justify-items: center;
+  }
+ 
+  @media (min-width: 768px){
+    .contentsGrid{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media (min-width: 1024px){
+    .contentsGrid{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+  @media (min-width: 1280px){
+    .contentsGrid{
+      grid-template-columns: repeat(4,1fr);
+    }
+  }
+  .contentsCard{
+    width: 290px;
+  }
+
+  .contentsCardImg {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
     margin-bottom: 12px;
   }
 
+  .contentsCardImg img{
+    width: 290px;
+    transition: all 0.5s;
+  }
+
+  .contentsCardImg img:hover{
+    transform:scale(1.1);
+  }
+
+  .contentsCardComplete{
+    display: inline;
+    border: 1px solid #059669;   
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #059669;
+  }
+  .contentsCardIng{
+    display: inline;
+    border: 1px solid #1d4ed8;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size:14px;
+    font-weight: 600;
+    color : #1d4ed8;
+  }
+  .contentsCardEnd{
+    display: inline;
+    border: 1px solid #3f3f46;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size:14px;
+    font-weight: 600;
+    color : #3f3f46;
+  }
+
+
+  .contentsCardTitle{
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
   
+  .contentsCardDescription{
+    margin-top:  8px;
+    font-size: 18px;
+  }
+
+  .contentsCardDate{
+    margin-top:16px;
+    color: #a3a3a3;
+  }
+  .alarm {
+    position: relative;
+    margin-top: 96px;
+   }
+   .alarm img{    
+     width: 100%;
+     height: 200px;
+     object-fit:cover;
+   }
+ 
+   .alarmMessage {
+   position: absolute;
+   top: 50%;
+   margin-left:196px;
+   font-size:18px;
+   transform: translateY(-50%);
+   }
+ 
+   .alarmTitle {
+     font-size: 14px;
+     font-weight: 600;
+     color: #072c56;
+     margin-bottom: 24px;
+   }
+   .alarmDescription {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 24px;
+   }
+
+   .alarmDetail{
+    font-size:14px;
+    font-weight: 600;  
+    color:#48434392;  
+   }
+   .introduceGrid{
+    margin-top:48px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:32px;
+    justify-items: center;
+   }
+
+   @media (min-width: 1024px) {
+    .introduceGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+
+   .introduceCard{
+    position: relative;
+   }
+
+   .introduceCardImg img{
+    width:600px;
+   }
+
+   .introduceMessage{
+    position:absolute;
+    top:0;
+    font-size: 18px;
+    padding:40px;
+   }
+
+   .introduceTitle{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;  
+  }
+
+   .introduceDescription{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+   }
+
+   .introducedetail{
+    font-size: 14px;
+    font-weight: 600;
+    color:#737373;
+   }
+
+   .sitemap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 32px;
+    border-top: 1px solid #d4d4d4;
+    margin-top: 120px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 12px;
+  }
+  
+  .sitemapLogo {
+    align-self: start;
+  }
+  
+  .sitemapMenu {
+    display: flex;
+  }
+  
+  .sitemapCompany {
+    margin-left: 112px;
+  }
+  
+  .sitemapTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #737373;
+    margin-bottom: 20px;
+  }
+  
+  .sitemapButton {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  footer {
+    max-width: 1280px;
+    margin: auto;
+    font-size: 12px;
+    color: #737373;
+    padding-bottom: 24px;
+  }
+  
+  .blockchainSchool {
+    display: flex;
+    margin-top: 16px;
+  }
+  
+  .blockchainSchool div {
+    background-color: deeppink;
+    color: whitesmoke;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 9999px;
+    margin-right: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .footerInfo {
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
